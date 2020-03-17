@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+    <title>Add</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="stylesheets/images/images.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <a class="navbar-brand" href="#">Project Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/project">Project <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/users">Users</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button">Log out</a>
+        </form>
+    </div>
+</nav>
+<div class="view"
+    style="background-image: url('stylesheets/images/bg-01.jpg'); height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+    <body>
+        <div class="container-fluid">
+            <br>
+            <h2>Add Project</h2>
+            <hr>
+            <form method="post">
+                <div class="container">
+                    <div class="form-group row">
+                        <label class="col-sm-1 col-form-label">
+                            Name
+                        </label>
+                        <div class="row col-sm-6">
+                            <input class="form-control" type="text" id="String" name="string" placeholder="Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="form-group row">
+                        <label class="col-sm-1 col-form-label">
+                            Member
+                        </label>
+                        <div class="row col-sm-6">
+                            <select class="form-control" id="Bolean" name="boolean" placeholder="--Choose the bolean--">
+                                <option value="">Choose Member</option>
+
+                                <option value="1">Eko Prasetyo</option>
+
+                                <option value="2">Romi Sunade</option>
+
+                                <option value="3">Asep Cikungunya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn"
+                                style="background-color: #321a75; color: #fff;">Add</button>
+                            <a class="btn btn-info" href="/project" role="button">Back</a>
+                        </div>
+                    </div>
+            </form>
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+    </body>
+</div>
+
+</html>

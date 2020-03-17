@@ -1,21 +1,40 @@
 {
-  "name": "pms",
+  "name": "project-management-system",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-fileupload": "^1.1.6",
+    "express-session": "^1.17.0",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "moment": "^2.24.0",
+    "morgan": "~1.9.1",
+    "pg": "^7.18.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eko-prasetyo15/PMS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eko-prasetyo15/PMS/issues"
+  },
+  "homepage": "https://github.com/Eko-prasetyo15/PMS#readme",
+  "description": ""
 }
