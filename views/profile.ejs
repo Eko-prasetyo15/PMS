@@ -1,0 +1,123 @@
+<%- include("./partials/header") %>
+<%- include("./partials/navbar") %>
+<!-- Full Page Intro -->
+<div class="view"
+    style="background-image: url('stylesheets/images/bg-01.jpg'); background-repeat: no-repeat; height : 100%; background-size: cover; background-position: center center;">
+
+
+    <body>
+        <div class="container-fluid">
+            <br>
+            <h1>Profile</h1>
+            <hr>
+
+            <div class="container">
+                <h3>Filters</h3>
+                <br>
+                <form id="form-filter" method="GET">
+                    <input type="hidden" name="page" value="1">
+                    <div class="form-group row">
+                        <label for="inputID" class="col-sm-2 col-form-label"> <input type="checkbox" name="checkemail">
+                            Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="inputEmail" placeholder="@Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label"> <input type="checkbox" name="checkpassword">
+                            Password</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label"> <input type="checkbox"
+                                name="checkfirstname">
+                            First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="inputFirstname" placeholder=" FirstName">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label"> <input type="checkbox"
+                                name="checklastname">
+                            Last Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="inputLastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <label for="inputEmail" class="col-sm-2 col-form-label"> <input type="checkbox"
+                                    name="checkposition">
+                                Position</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="gridRadios1" name="inputTypeJob"
+                                        value="Full Time" checked="">
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Front End Developers
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="gridRadios2" name="inputTypeJob"
+                                        value="Part Time">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        Back End Developers
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="gridRadios2" name="inputTypeJob"
+                                        value="Part Time">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        Full Stack Developers
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <label for="inputEmail" class="col-sm-2 col-form-label"> <input type="checkbox"
+                                    name="checkEmail">
+                                Type</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="gridRadios1" name="inputTypeJob"
+                                        value="Full Time" checked="">
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Full Time
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" id="gridRadios2" name="inputTypeJob"
+                                        value="Part Time">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        Part Time
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn"
+                                style="background-color: #751a52; color: #fff;">Update</button>
+                            <a class="btn btn-primary" href="/project" role="button">Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr>
+
+
+    </body>
+    <div class="flex-col-c p-t-100">
+        <span class="txt1 p-b-25" style="color: #fff;">
+            Made by "Abushanum"
+        </span>
+    </div>
+
+
+    <%- include("./partials/footer") %>

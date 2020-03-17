@@ -27,18 +27,21 @@ router.get('/logout', function(req, res, next) {
   }
 });
 
-router.get('/users', function(req, res, next) {
-  res.render('Users');
+
+router.get('/profile', function(req, res, next) {
+  res.render('profile');
 });
 
 router.post('/project', function(req, res, next) {
-  res.redirect('Users');
+  res.redirect('profile');
 });
 
 router.get('/project/add', function(req, res, next) {
   res.render("add")
 });
-
+router.post('/project/add', function(req, res, next) {
+  res.render("project")
+});
 
 
 module.exports = router;

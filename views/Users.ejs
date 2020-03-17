@@ -1,4 +1,4 @@
-<%- include("./partials/header") %>
+
 <%- include("./partials/navbar") %>
 <!-- Full Page Intro -->
 <div class="view"
@@ -8,11 +8,12 @@
     <body>
         <div class="container-fluid">
             <br>
-            <h2>Users</h2>
+            <h1>Users</h1>
             <hr>
 
             <div class="container">
                 <h3>Filters</h3>
+                <br>
                 <form id="form-filter" method="GET">
                     <input type="hidden" name="page" value="1">
                     <div class="form-group row">
@@ -81,8 +82,8 @@
                     <div class="form-group row">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn"
-                                style="background-color: #321a75; color: #fff;">Search</button>
-                            <a class="btn btn-info" href="/project" role="button">Show All</a>
+                                style="background-color: #751a52; color: #fff;">Search</button>
+                            <a class="btn btn-primary" href="/project" role="button">Show All</a>
                         </div>
                     </div>
                 </form>
@@ -92,6 +93,7 @@
             <div class="container">
                 <form method="POST" action="/project/option">
                     <h3>Option</h3>
+                    <br>
                     <div class="form-group row">
                         <div class="col-sm-2">Columns</div>
                         <div class="col-sm-10">
@@ -120,7 +122,7 @@
                     <div class="form-group row">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn"
-                                style="background-color: #321a75; color: #fff;">Apply</button>
+                                style="background-color: #751a52; color: #fff;">Apply</button>
                         </div>
                     </div>
                 </form>
@@ -142,34 +144,30 @@
 
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
-                        <li class="page-item disabled ">
-                            <a class="page-link" href="/project/?page=0" aria-label="Previous">
-                                <span aria-hidden="true">«</span>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
-
-                        <li class="page-item active ">
-                            <a class="page-link" href="/project/?page=1">1</a>
-                        </li>
-
-                        <li class="page-item disabled">
-                            <a class="page-link" href="/project/?page=2" aria-label="Next">
-                                <span aria-hidden="true">»</span>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
                             </a>
                         </li>
                     </ul>
                 </nav>
 
-                <a class="btn" style="background-color: #321a75; color: #fff;" href="/project/add" role="button">Add</a>
+                <a class="btn" style="background-color: #751a52; color: #fff;" href="/project/add" role="button">Add</a>
             </div>
-            
+
         </div>
     </body>
-    <div class="flex-col-c p-t-155">
-        <span class="txt1 p-b-17">
+    <div class="flex-col-c p-t-100">
+        <span class="txt1 p-b-25" style="color: #fff;">
             Made by "Abushanum"
         </span>
+    </div>
 </div>
-
-
     <%- include("./partials/footer") %>

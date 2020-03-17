@@ -1,54 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-
-    <title>Add</title>
-</head>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <img src="stylesheets/images/images.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    <a class="navbar-brand" href="#">Project Management</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/project">Project <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/users">Users</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Profile
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="/" role="button">Log out</a>
-        </form>
-    </div>
-</nav>
-<div class="view"
-    style="background-image: url('stylesheets/images/bg-01.jpg'); height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+<%- include("./partials/navbar") %>
 
     <body>
         <div class="container-fluid">
@@ -105,5 +55,9 @@
                 crossorigin="anonymous"></script>
     </body>
 </div>
-
+<div class="flex-col-c p-t-100">
+    <span class="txt1 p-b-25" style="color: #fff;">
+        Made by "Abushanum"
+    </span>
+</div>
 </html>
