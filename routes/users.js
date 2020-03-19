@@ -1,44 +1,19 @@
 var express = require('express');
 var router = express.Router();
-
+const helpers = require('../helpers/mangat')
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 /* GET users listing. */
-router.get('/project', function(req, res, next) {
-  res.render('project', {title: "web"});
-});
 
-router.post('/project', function(req, res, next) {
-  res.redirect('project');
-});
+module.exports = (db) => {
+    /* GET home page. */
+    router.get('/',(req, res, next) => {
+        res.render('Users/users')
+      });
 
-router.get('/logout', function(req, res, next) {
-  if (req.session) {
-    // delete session object
-    req.session.destroy(function(err) {
-      if(err) {
-        return next(err);
-      } else {
-        return res.redirect('/login');
-      }
+    router.get('/addusers',(req, res, next) => {
+        res.render('Users/addusers');
     });
-  }
-});
 
-
-router.get('/profile', function(req, res, next) {
-  res.render('profile');
-});
-
-router.post('/project', function(req, res, next) {
-  res.redirect('profile');
-});
-
-router.get('/project/add', function(req, res, next) {
-  res.render("add")
-});
-router.post('/project/add', function(req, res, next) {
-  res.render("project")
-});
-
-
-
-module.exports = router;
+    return router;
+}
