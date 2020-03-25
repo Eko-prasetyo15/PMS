@@ -1,0 +1,111 @@
+<%- include("../partials/navbar") %>
+
+<body>
+    <div class="container-fluid">
+        <br>
+        <h2>Add Users</h2>
+        <hr>
+        <form method="post">
+            <div class="container">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        Email
+                    </label>
+                    <div class="row col-sm-6">
+                        <input class="form-control" type="text" id="email" name="email" placeholder="@Email" />
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        Password
+                    </label>
+                    <div class="row col-sm-6">
+                        <input class="form-control" type="password" id="password" name="password"
+                            placeholder="Password" />
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        First Name
+                    </label>
+                    <div class="row col-sm-6">
+                        <input class="form-control" type="text" id="firstname" name="firstname"
+                            placeholder="Firs Name" />
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">
+                        Last Name
+                    </label>
+                    <div class="row col-sm-6">
+                        <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Last Name" />
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group row">
+                    <label for="inpuposition" class="col-sm-2 col-form-label">
+                        Position</label>
+                    <div class="row col-sm-6">
+                        <select class="custom-select" id="position" name="position">
+                            <option value="selected">Choose Position</option>
+
+                            <option value="Front End Developers">Front End Developers</option>
+
+                            <option value="Back End Developers">Back End Developers</option>
+
+                            <option value="Full Stack Developers">Full Stack Developers</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2">
+                        Type Job
+                        </legend>
+                        <div class="col-sm-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="fulltime" name="typejob"
+                                    value="Full Time" checked="">
+                                <label class="form-check-label" for="gridRadios1">
+                                    Full Time
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="parttime" name="typejob"
+                                    value="Part Time">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Part Time
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </fieldset>
+
+            <div class="container">
+                <div class="form-group row">
+                    <div class="col-sm-10">
+
+                        <button class="btn" type="submit" style="background-color: #751a52; color: #fff;"
+                            role="button">Add</button>
+                        <a class="btn btn-info" href="/users" role="button">Back</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="flex-col-c p-t-100">
+        <span class="txt1 p-b-25" style="color: #fff;">
+            Made by "Abushanum"
+        </span>
+    </div>
+    <%- include("../partials/footer") %>

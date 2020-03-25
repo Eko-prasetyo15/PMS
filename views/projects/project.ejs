@@ -2,6 +2,7 @@
 <!-- Full Page Intro -->
 <div class="view"
     style="background-image: url('stylesheets/images/bg-01.jpg'); height: 200%; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
     <body>
         <div class="container-fluid">
             <br>
@@ -13,7 +14,7 @@
                 <form id="form-filter" method="GET">
                     <input type="hidden" name="page" value="1">
                     <div class="form-group row">
-                        <label for="inputID" class="col-sm-2 col-form-label"> <input type="checkbox" name="checkID">
+                        <label for="inputID" class="col-sm-2 col-form-label"> <input type="checkbox" name="checkId">
                             ID</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="inputID" placeholder="ID">
@@ -32,14 +33,10 @@
                             Member</label>
                         <div class="col-sm-10">
                             <select class="custom-select" name="inputMember">
-                                <option value="">Choose Member</option>
-
-                                <option value="1">Eko Prasetyo</option>
-
-                                <option value="2">Romi Sunade</option>
-
-                                <option value="3">Asep Cikungunya</option>
-
+                                <option selected>Choose Member</option>
+                                <% data.forEach((item) => { %>
+                                <option value="<%= item.member %>"><% item.member %></option>
+                                <%})%>
                             </select>
                         </div>
                     </div>
@@ -61,8 +58,9 @@
                         <div class="col-sm-2">Columns</div>
                         <div class="col-sm-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="checkID" name="chkid" value="true">
-                                <label class="form-check-label" for="checkID">
+                                <input class="form-check-input" type="checkbox" id="checkID" name="checkId"
+                                    value="true">
+                                <label class="form-check-label" for="checkId">
                                     ID
                                 </label>
                             </div>
@@ -100,6 +98,29 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <% data.forEach((item) => { %>
+                        <tr>
+                            <th scope="row" style="text-align: left;">
+                                <a class="btn-btn-outline-secondary" href="/project/overview" <%= item.projectid %>"
+                                    role="button">
+                                    <%= item.projectid %> </a>
+                            </th>
+                            <td style="text-align: left;"><%= item.name %></td>
+                            <td style="text-align: left;"><%= item.member %></td>
+                            <td>
+                                <a href="/project/edit/<%= item.projectid %>">
+                                    <button type="button" class="btn btn-sm btn-success" type="submit">
+                                        Edit
+                                    </button>
+                                </a>
+                                <a href="/project/delete/<%= item.projectid %>">
+                                    <button type="button" class="btn btn-sm btn-danger" type="submit">
+                                        Delete
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                        <% }); %>
                     </tbody>
                 </table>
                 <nav aria-label="Page navigation example">
@@ -119,7 +140,8 @@
                     </ul>
                 </nav>
                 <br>
-                <a class="btn" style="background-color: #751a52; color: #fff;" href="/project/addproject" role="button">Add</a>
+                <a class="btn" style="background-color: #751a52; color: #fff;" href="/project/addproject"
+                    role="button">Add</a>
             </div>
         </div>
     </body>

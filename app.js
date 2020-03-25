@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session')
 const flash = require('connect-flash');
+const fileUpload = require('express-fileupload');
+
 
 //Model setup
 const { Pool } = require("pg");
@@ -36,6 +38,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/login')));
+app.use(session({
+  secret: 'eesapi',
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(flash());
+app.use(fileUpload());
+app.use(function (req, res, next) {
+  res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+  next();
+});
+
 
 app.use('/', loginRouter);
 app.use('/users', usersRouter);
