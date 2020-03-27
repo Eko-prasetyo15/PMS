@@ -19,19 +19,17 @@
                 <div class="form-group row">
                     <label for="inputBoolean" class="col-sm-2 col-form-label" name="member">
                         Member</label>
-                    <div class="container">
-                        <div class="col-sm-10">
-                            <% result.forEach((item) => { %>
-                            <div class="form-check mb-2">
-                                <input class="form-check-input" type="checkbox"
-                                    id="<%= item.firstname + ' ' + item.lastname %>" name="member"
-                                    value="<%= item.userid %>, '<%= item.position %>'" />
-                                <label class="form-check-label" for="<%= item.firstname + ' ' + item.lastname %>">
-                                    <%= item.firstname + ' ' + item.lastname %>
-                                </label>
-                            </div>
-                            <% }); %>
+                    <div class="col-sm-10">
+                        <% result.forEach((item) => { %>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox"
+                                id="<%= item.firstname + ' ' + item.lastname %>" name="member"
+                                value="<%= item.userid %>, '<%= item.position %>'" />
+                            <label class="form-check-label" for="<%= item.firstname + ' ' + item.lastname %>">
+                                <%= item.firstname + ' ' + item.lastname %>
+                            </label>
                         </div>
+                        <% }); %>
                     </div>
                 </div>
             </div>

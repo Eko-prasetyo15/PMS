@@ -1,0 +1,65 @@
+<%- include("../partials/sidebar") %>
+<div class="col-9"
+    style="background-image: url('stylesheets/images/bg-01.jpg'); height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div class="container-fluid">
+        <h2>Add Members</h2>
+        <p class="h5 mb-4 text-dark">#<%= result.projectid %> <%= result.name %></p>
+        <hr>
+        <form method="post">
+            <div class="container">
+                <div class="form-group row">
+                    <div class="col-sm">
+                        <label for="filter-id" class="col-form-label">ID</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group row">
+                    <label for="inputBoolean" class="col-sm-2 col-form-label">
+                        Member</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select" name="inputMember">
+                            <option selected>Choose Member</option>
+                            <% usersData.forEach((item) => { %>
+                            <option value="<%= item.userid %>"><%= item.name %></option>
+                            <% }); %>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group row">
+                    <label for="inputposition" class="col-sm-2 col-form-label">
+                        Position</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select" id="position" name="inputPosition">
+                            <option value="selected">Choose Position</option>
+
+                            <option value="Front End Developers">Front End Developers</option>
+
+                            <option value="Back End Developers">Back End Developers</option>
+
+                            <option value="Full Stack Developers">Full Stack Developers</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group row">
+                    <div class="col-sm-10">
+
+                        <button class="btn" type="submit" style="background-color: #751a52; color: #fff;"
+                            role="button">Add</button>
+                        <a class="btn btn-info" href="/project/member/<%= result.projectid %>" role="button">Back</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col-c p-t-100">
+                <span class="txt1 p-b-25" style="color: #fff;">
+                    Made by "Abushanum"
+                </span>
+            </div>
+    </div>
+</div>
+<%- include("../partials/footer") %>
