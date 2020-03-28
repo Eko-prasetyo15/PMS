@@ -435,6 +435,30 @@ console.log(sqlData)
         })
     })
 })
+
+ //get page project/ Issuess / add
+ router.get('/issues/:projectid/addissues', helpers.isLoggedIn, (req, res) => {
+  const { projectid } = req.params;
+  let getProject = `SELECT * FROM projects WHERE projectid=${projectid}`;
+  let getUser = `SELECT users.userid, CONCAT(users.firstname,' ',users.lastname) as nama , projects.projectid FROM members 
+  LEFT JOIN users ON members.userid = users.userid
+  LEFT JOIN projects ON members.projectid = projects.projectid WHERE members.projectid = ${projectid}`;
+  db.query(getUser, (err, dataUser) => {
+      if (err) res.status(500).json(err)
+      db.query(getProject, (err, getData) => {
+          if (err) res.status(500).json(err)
+          res.render('projects/addissues', {
+              user: req.session.user,
+              title: 'Darsboard Issues Add',
+              title2: 'New Issues',
+              url: 'project',
+              url2: 'issues',
+              result: getData.rows[0],
+              result2: dataUser.rows
+          })
+      })
+  })
+})
   return router;
 }
 
