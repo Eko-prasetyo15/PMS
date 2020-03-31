@@ -543,9 +543,10 @@ module.exports = db => {
   router.get('/issues/:projectid/addissues', helpers.isLoggedIn, (req, res) => {
     const { projectid } = req.params;
     let getProject = `SELECT * FROM projects WHERE projectid=${projectid}`;
-    let getUser = `SELECT users.userid, CONCAT(users.firstname,' ',users.lastname) as nama , projects.projectid FROM members 
+    let getUser = `SELECT users.userid, CONCAT(users.firstname,' ',users.lastname) as name , projects.projectid FROM members 
   LEFT JOIN users ON members.userid = users.userid
   LEFT JOIN projects ON members.projectid = projects.projectid WHERE members.projectid = ${projectid}`;
+  console.log(getUser)
     db.query(getUser, (err, dataUser) => {
       if (err) res.status(500).json(err)
       db.query(getProject, (err, getData) => {
@@ -702,15 +703,15 @@ module.exports = db => {
     // } else {
       db.query(updateIssue,(err) => {
         if (err) res.status(500).json(err)
-        const addActivity = `INSERT INTO activity (projectid, time, title, description, author) VALUES ($1, NOW(), $2,'[${status}] [${tracker}] [${subject}] - Done: ${done}%', $3)`
-        const activityData = [projectid, subject, userid];
-        db.query(addActivity, activityData, (err) => {
-          if (err) res.status(500).json(err)
+         const addActivity = `INSERT INTO activity (projectid, time, title, description, author) VALUES ($1, NOW(), $2,'[${status}] [${tracker}] [${subject}] - Done: ${done}%', $3)`
+         const activityData = [projectid, subject, userid];
+         db.query(addActivity, activityData, (err) => {
+           if (err) res.status(500).json(err)
           res.redirect(`/project/issues/${projectid}`)
         })
-      // })
+       })
     })
-  })
+  // })
 
   router.get('/issues/:projectid/delete/:issueid', (req, res) => {
     const { projectid, issueid } = req.params

@@ -99,11 +99,11 @@
                     </thead>
                     <tbody>
                         <% data.forEach((item) => { %>
-                        <tr class="table-row" data-href="/projects/overview/<%= item.projectid %>">
+                        <tr class="table-row" data-href="/projects/overview/<%= item.projectid %>"></tr>
                             <th scope="row" style="text-align: left;">
-                                <a class="btn-btn-outline-secondary" href="/project/overview/<%= item.projectid%>"
-                                    <%= item.projectid %>" role="button">
-                                    <%= item.projectid %> </a>
+                                <a href="/project/overview/<%= item.projectid%>">
+                                    <button class="btn btn-outline-dark"><%= item.projectid %></button>
+                                </a>
                             </th>
                             <td style="text-align: left;"><%= item.name %></td>
                             <td style="text-align: left;"><%= item.member %></td>
