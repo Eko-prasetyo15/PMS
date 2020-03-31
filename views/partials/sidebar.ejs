@@ -6,14 +6,17 @@
 		<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 			<a href="/project" class="btn btn-sm btn-dark" role="button" aria-pressed="true"> <span
 					aria-hidden="true"></span> Back to main menu</a> <br>
-			<a class="nav-link"
+			<a class="nav-link btn-secondary active"
 				href="/project/overview/<%= result.projectid %>">Overview</a>
-			<a class="nav-link"
+				<hr>
+			<a class="nav-link active"
 				href="/project/activity/<%= result.projectid %>">Activity</a>
-			<br>
-			<a class="nav-link"
+			<hr>
+			<a class="nav-link active"
 				href="/project/member/<%= result.projectid %>">Members</a>
-			<a class="nav-link"
+				<hr>
+			<a class="nav-link active"
 				href="/project/issues/<%= result.projectid %>">Issues</a>
+				<hr>
 		</div>
 	</div>
